@@ -12,4 +12,4 @@ This repo contains:
 To Start:
 
 - run `docker-compose up`
-- navigate to one of actively listening ports in your localhost
+- navigate to localhost:8080
