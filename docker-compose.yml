@@ -1,0 +1,20 @@
+version: '3'
+services:
+  load_balancer:
+    image: haproxy
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./haproxy:/usr/local/etc/haproxy
+  nodeapp_1:
+    image: nodeapp
+    environment:
+      - APP_ID=9910
+  nodeapp_2:
+    image: nodeapp
+    environment:
+      - APP_ID=9920
+  nodeapp_3:
+    image: nodeapp
+    environment:
+      - APP_ID=9930
